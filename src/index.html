@@ -2,10 +2,116 @@
 layout: default
 ---
 
-<main class="min-h-screen bg-gray-700">
+<header class="relative w-full h-96 bg-green-900 overflow-hidden">
+  <div x-data class="absolute z-0 w-full h-full" aria-hidden="true">
+    <video
+      playsinline
+      autoplay
+      muted
+      loop
+      class="object-cover w-screen h-screen"
+    >
+      <source src="/stars.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-<header class="flex justify-center items-center w-full h-96 bg-green-900">
-  <h1 class="text-5xl text-white text-center">Innovate Trent</h1>
+  <div
+    class="
+      absolute
+      flex flex-col
+      justify-center
+      items-center
+      z-10
+      w-full
+      h-full
+      bg-green-900 bg-opacity-70
+    "
+  >
+    <img
+      src="/logo.svg"
+      class="h-32 w-32"
+      alt="Orange circular logo with a large white capital letter 'I' composed of a geometric network of lines and orbs"
+    />
+    <h1 class="text-5xl text-white text-center font-heading">Innovate Trent</h1>
+  </div>
 </header>
 
+<main class="min-h-screen bg-gray-700">
+  <section
+    class="min-h-96 py-4 bg-yellow-700 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl py-6 max-w-screen-md text-white">{{ metadata.impressum }}</p>
+
+    <p class="text-2xl py-6 max-w-screen-md text-white">{{ metadata.twitch_intro }}</p>
+
+    <p class="text-2xl py-6 max-w-screen-md text-white">{{ metadata.discord_intro }}</p>
+
+    <a
+      href="https://discord.gg/JXb5tVGAeX"
+      target="_blank"
+      rel="noopener noreferrer nofollow" class="px-4 py-2 bg-green-700 border-2 rounded-lg border-green-900 flex text-white hover:shadow-xl text-2xl justify-center items-center gap-4 hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 ease-out">
+      <ion-icon name="logo-discord"></ion-icon>
+      Join our Discord!
+    </a>
+  </section>
+
+  <section
+    class="min-h-screen bg-green-900 flex flex-col justify-center items-center"
+  >
+
+  <h2 class="text-center text-4xl text-white py-6">
+  Now Playing:
+  </h2>
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        autoplay: false,
+        layout: "video",
+        channel: "rtgame",
+      });
+    </script>
+  </section>
+
+  <section
+    class="min-h-screen bg-yellow-700 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl text-white">News and Announcements!</p>
+  </section>
+
+  <section
+    class="min-h-screen bg-green-900 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl text-white">Meet the Admin Team</p>
+  </section>
+
+  <section
+    class="min-h-screen bg-yellow-700 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl text-white">We're on Instagram too!</p>
+
+    <a href="" target="_blank" rel="noopener nofollow noreferrer">Follow Us</a>
+  </section>
+
+  <section
+    class="min-h-screen bg-green-900 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl text-white">Club Photos</p>
+  </section>
+
+  <section
+    class="min-h-screen bg-yellow-700 flex flex-col justify-center items-center"
+  >
+    <p class="text-2xl text-white">YouTube</p>
+
+    <p>
+      (Just imagine a playlist is embedded here with stream VODs or something)
+    </p>
+  </section>
 </main>
