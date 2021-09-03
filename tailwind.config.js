@@ -4,6 +4,11 @@ module.exports = {
     // mode: 'jit',
     theme: {
       extend: {
+        colors: {
+          orange: '#F47B20',
+          lightorange: '#FF8736',
+          lightgreen: '#29F377'
+        },
         fontFamily: {
           'noto': ['Noto Sans', 'sans-serif'],
           'heading': ['Staatliches', 'monospace'],
@@ -15,7 +20,11 @@ module.exports = {
       },
     },
     variants: {
-      extend: {},
+      extend: {
+        textColor: ['focus-visible'],
+        ringColor: ['focus-visible'],
+        ringWidth: ['focus-visible']
+      },
     },
     plugins: [],
   }

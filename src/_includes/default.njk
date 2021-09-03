@@ -1,64 +1,87 @@
+---
+ogtype: website
+image: opengraph.png
+---
+
 <!DOCTYPE html>
 <html lang="en_CA">
+
 <head>
-
-  <!-- https://github.com/joshbuchea/HEAD -->
-
-  <!-- Recommended -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% seo "" %}
 
-  <!-- Elements -->
-  <meta charset="utf-8">
-
-  <!-- Meta -->
-  <meta name="description" content="{{ metadata.description }}">
-  <meta name="generator" content="11ty">
-
-  <!-- Icons -->
-  <!-- https://favicon.io/ -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f47b20">
+  <meta name="apple-mobile-web-app-title" content="Innovate Trent">
+  <meta name="application-name" content="Innovate Trent">
+  <meta name="msapplication-TileColor" content="#ff8736">
+  <meta name="theme-color" content="#0a3f1f">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Staatliches&display=swap" rel="stylesheet">
 
-
-  <title></title>
-
   <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
 
-<body class="font-sans leading-normal tracking-normal text-gray-900">
+<body class="overflow-x-hidden font-sans leading-normal tracking-normal text-gray-900">
 
   {{ content | safe }}
 
-  <footer class="bg-green-900 h-96 flex flex-col justify-center items-center">
+  <footer class="flex flex-col items-center justify-center w-full overflow-x-hidden text-white bg-green-900 h-96">
 
-  <div>
-  <a>Discord</a>
-  <a>Instagram</a>
-  <a>GitHub</a>
-  <a>Twitch</a>
-  <a>YouTube</a>
-  </div>
+    <div class="flex flex-wrap items-center justify-center gap-6 md:flex-nowrap">
+      <a class="flex items-center justify-center w-16 h-16 text-6xl transition duration-200 ease-out group focus:outline-none focus:text-lightgreen focus-visible:ring-2 focus-visible:ring-lightorange"
+        href="{{ links.discord }}" target="_blank" rel="noopener noreferrer nofollow" aria-name="Discord">
+        <ion-icon name="logo-discord" aria-hidden="true"
+          class="transition duration-200 ease-out group-hover:text-lightorange"></ion-icon>
+      </a>
+      <a class="flex items-center justify-center w-16 h-16 text-6xl transition duration-200 ease-out group focus:outline-none focus:text-lightgreen focus-visible:ring-2 focus-visible:ring-lightorange"
+        href="{{ links.instagram }}" target="_blank" rel="noopener noreferrer nofollow" aria-name="Instagram">
+        <ion-icon name="logo-instagram" aria-hidden="true"
+          class="transition duration-200 ease-out group-hover:text-lightorange"></ion-icon>
+      </a>
+      <a class="flex items-center justify-center w-16 h-16 text-6xl transition duration-200 ease-out group focus:outline-none focus:text-lightgreen focus-visible:ring-2 focus-visible:ring-lightorange"
+        href="{{ links.github }}" target="_blank" rel="noopener noreferrer nofollow" aria-name="Github">
+        <ion-icon name="logo-github" aria-hidden="true"
+          class="transition duration-200 ease-out group-hover:text-lightorange"></ion-icon>
+      </a>
+      <a class="flex items-center justify-center w-16 h-16 text-6xl transition duration-200 ease-out group focus:outline-none focus:text-lightgreen focus-visible:ring-2 focus-visible:ring-lightorange"
+        href="{{ links.twitch }}" target="_blank" rel="noopener noreferrer nofollow" aria-name="Twitch">
+        <ion-icon name="logo-twitch" aria-hidden="true"
+          class="transition duration-200 ease-out group-hover:text-lightorange"></ion-icon>
+      </a>
+      <a class="flex items-center justify-center w-16 h-16 text-6xl transition duration-200 ease-out group focus:outline-none focus:text-lightgreen focus-visible:ring-2 focus-visible:ring-lightorange"
+        href="{{ links.youtube }}" target="_blank" rel="noopener noreferrer nofollow" aria-name="YouTube">
+        <ion-icon name="logo-youtube" aria-hidden="true"
+          class="transition duration-200 ease-out group-hover:text-lightorange"></ion-icon>
+      </a>
+    </div>
 
-  <div>
-  <span>&copy; 2021 - Innovate Trent</span>
-</div>
+    <div class="py-6">
+      <span class="text-2xl font-heading">&copy; 2021 - <a href="/"
+          class="transition duration-200 ease-out hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-lightgreen">Innovate
+          Trent</a></span>
+    </div>
 
-<div>
-  <span>Site design by <a href="https://overscore.media" target="_blank" rel="noopener nofollow noreferrer">OverScore Media</a>
-  </div>
-</div>
+    <div>
+      <span class="text-xl text-white font-heading">Site design by <a href="https://overscore.media" target="_blank"
+          class="transition duration-200 ease-out hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-lightgreen"
+          rel="noopener nofollow noreferrer">OverScore Media</a>
+    </div>
+    </div>
 
   </footer>
 
-  
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

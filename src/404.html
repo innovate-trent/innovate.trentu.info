@@ -2,4 +2,40 @@
 layout: default
 permalink: 404.html
 ---
-Missing
+
+<header class="relative w-full overflow-hidden bg-green-900 h-96">
+  <div x-data class="absolute z-0 w-full h-full" aria-hidden="true">
+    <video playsinline autoplay muted loop class="object-cover w-screen h-screen">
+      <source src="/stars.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="absolute z-10 flex flex-col items-center justify-center w-full h-full bg-green-900 bg-opacity-70">
+    <img src="/logo.svg" class="w-32 h-32"
+      alt="Orange circular logo with a large white capital letter 'I' composed of a geometric network of lines and orbs" />
+    <h1 class="px-3 text-5xl text-center text-white font-heading">Innovate Trent</h1>
+  </div>
+</header>
+
+<main class="min-h-screen overflow-x-hidden bg-yellow-700">
+
+<div class="flex flex-col items-center justify-center text-center text-white min-h-96">
+<h2 class="px-2 py-8 text-6xl font-heading">404 - Page Not Found</h2>
+<h3 class="px-3 pt-8 pb-12 text-4xl font-heading">The page you were looking for doesn't exist.</h3>
+
+<p class="px-4 py-6 text-2xl">Try visiting <a href="/" class="text-gray-300">our homepage</a> instead</p>
+</div>
+
+<hr />
+  <section class="flex flex-col items-center justify-center py-4 min-h-96">
+    <p class="max-w-screen-md px-3 py-6 text-xl text-white md:text-2xl">{{ metadata.impressum }}</p>
+
+    <p class="max-w-screen-md px-3 py-6 text-xl text-white md:text-2xl">{{ metadata.discord_intro }}</p>
+
+    <a href="{{ links.discord }}" target="_blank" rel="noopener noreferrer nofollow"
+      class="flex items-center justify-center gap-4 px-4 py-2 text-2xl text-white transition duration-200 ease-out bg-green-700 border-2 border-green-900 rounded-lg hover:shadow-xl hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-400">
+      <ion-icon name="logo-discord" aria-hidden="true"></ion-icon>
+      Join our Discord!
+    </a>
+  </section>
+</main>

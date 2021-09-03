@@ -1,5 +1,7 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier");
+const pluginSEO = require("eleventy-plugin-seo");
+
 
 module.exports = function(eleventyConfig) {
 
@@ -14,6 +16,10 @@ module.exports = function(eleventyConfig) {
 
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
+
+  // SEO stuff
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
+
 
   var pathPrefix = "";
   if (process.env.GITHUB_REPOSITORY) {
